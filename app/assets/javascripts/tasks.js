@@ -45,20 +45,21 @@
     });
 
 
-    $('#new-form').submit(function(event) {
-      event.preventDefault();
-      var textbox = $('.new-todo');
-      var payload = {
-        task: {
-          title: textbox.val()
-        }
-      };
-      $.post("/tasks", payload).success(function(data) {
-        var htmlString = taskHtml(data);
-        var ulTodos = $('.todo-list');
-        ulTodos.append(htmlString);
-        $('.toggle').click(toggleTask);
-      });
+      $('#new-form').submit(function(event) {
+    event.preventDefault();
+    var textbox = $('.new-todo');
+    var payload = {
+      task: {
+        title: textbox.val()
+      }
+    };
+    $.post("/tasks", payload).success(function(data) {
+      var htmlString = taskHtml(data);
+      var ulTodos = $('.todo-list');
+      ulTodos.append(htmlString);
+      $('.toggle').click(toggleTask);
+      $('.new-todo').val('');
     });
-
   });
+
+});
