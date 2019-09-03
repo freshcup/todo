@@ -35,7 +35,7 @@ body {
 
 button,
 input[type="checkbox"] {
-  outline: none;
+  outline: inline
 }
 
 .hidden {
@@ -118,7 +118,7 @@ label[for='toggle-all'] {
   display: none;
 }
 
-.toggle-all {
+.toggle-all + label {
   position: absolute;
   top: -55px;
   left: -12px;
