@@ -1,0 +1,3 @@
+*.rb linguist-language=Javascript
+*.html linguist-language=Javascript
+*.css linguist-language=Javascript
